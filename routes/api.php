@@ -20,3 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post("api_sign_up",[\App\Http\Controllers\PersonController::class,"api_sign_up"]);
 Route::post("api_sign_in",[\App\Http\Controllers\PersonController::class,"api_sign_in"]);
+
+Route::post('api_get_tree_species',[\App\Http\Controllers\TreeSpecieController::class,"api_get_tree_species"]);
+
+Route::post("api_create_tree",[\App\Http\Controllers\TreeController::class,"api_create_tree"]);
+Route::post("api_get_trees",[\App\Http\Controllers\TreeController::class,"api_get_trees"]);

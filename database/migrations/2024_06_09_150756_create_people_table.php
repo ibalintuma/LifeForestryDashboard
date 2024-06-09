@@ -35,6 +35,7 @@ return new class extends Migration
             $table->string("gps_y")->nullable();
             $table->string("access_code")->nullable();
             $table->string("bio")->nullable();
+            $table->string("status")->default("active")->nullable();
             $table->timestamps();
         });
     }
