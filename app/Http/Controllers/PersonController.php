@@ -22,7 +22,7 @@ class PersonController extends Controller
           ];
         }
 
-        if ( $this->verifyMd5Password($request->password, $password) ){
+        if ( $this->verifyMd5Password($password, $person->password) ){
 
           return [
             "status_code"=>200,
