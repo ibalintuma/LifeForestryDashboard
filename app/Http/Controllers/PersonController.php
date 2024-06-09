@@ -54,6 +54,7 @@ class PersonController extends Controller
     public function api_sign_up(Request $request){
       $name = $request->name;
       $type = $request->type;
+      $target_trees_to_plant = $request->target_trees_to_plant;
       $members = $request->members;
       $members_male = $request->members_male;
       $members_female = $request->members_female;
@@ -69,10 +70,28 @@ class PersonController extends Controller
       $gps_y = $request->gps_y;
       $bio = $request->bio;
 
+      if ( Person::where("phone",$phone)->count() != 0 ){
+        return [
+          "status_code"=>400,
+          "status_message"=>"Phone number already exists",
+        ];
+      }
+
+      if ( Person::where("email",$email)->count() != 0 ){
+        return [
+          "status_code"=>400,
+          "status_message"=>"Email already exists",
+        ];
+      }
+
+
       $person = new Person();
       $person->name = $name;
       $person->type = $type;
+      $person->target_trees_to_plant = $target_trees_to_plant;
       $person->members = $members;
+      $person->members_male = $members_male;
+      $person->members_female = $members_female;
       $person->gender = $gender;
       $person->age = $age;
       $person->phone = $phone;
