@@ -26,7 +26,7 @@ return new class extends Migration
 
             $table->double('height')->nullable();
             $table->double('canopy')->nullable();
-            $table->double('trunk_diameter')->nullable();
+            $table->string('trunk_diameter')->nullable();
 
             $table->string('leaf_condition')->nullable();
             $table->string('new_growth')->nullable();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tree;
 use App\Models\TreeSpecie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TreeController extends Controller
 {
@@ -47,12 +48,18 @@ class TreeController extends Controller
       $tree->survival = $survival;
       $tree->pests_diseases = $pests_diseases;
       $tree->notes = $notes;
+
+      if ($files = $request->file('picture')){
+        $fName = Str::random(10).time().'.'.$request->picture->extension();
+        $request->picture->move(public_path("images"), $fName);
+        $tree->picture = url("images/".$fName);
+      }
+
       $tree->save();
 
       return [
         "status_code"=>200,
         "status_message"=>"Tree Created",
-        "person"=>null
       ];
     }
 

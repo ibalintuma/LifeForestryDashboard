@@ -6,6 +6,7 @@ use App\Models\Tree;
 use App\Models\TreeFollowUp;
 use App\Models\TreeSpecie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TreeFollowUpController extends Controller
 {
@@ -30,6 +31,18 @@ class TreeFollowUpController extends Controller
       $tree_followup->notes = $request->notes;
       $tree_followup->status = $request->status;
       $tree_followup->date_of_follow_up = $request->date_of_follow_up;
+
+
+              if ($files = $request->file('picture')){
+                          $fName = Str::random(10).time().'.'.$request->picture->extension();
+                          $request->picture->move(public_path("images"), $fName);
+                          $tree_followup->picture = url("images/".$fName);
+                      }
+
+
+
+
+
       $tree_followup->save();
 
       return [
