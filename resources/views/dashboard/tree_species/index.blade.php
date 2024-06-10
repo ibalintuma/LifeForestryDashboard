@@ -73,9 +73,15 @@
           <td>{{$r->id}}</td>
           <td>{{$r->name}}</td>
           <td>{{$r->type}}</td>
-          <td>{{$r->picture}}</td>
+          <td>
+            <img src="{{$r->picture}}" height="100px" alt="">
+          </td>
           <td>{{$r->status}}</td>
-          <td>{{$r->notes}}</td>
+          <td>
+            <div style="width: 200px" >
+              {{$r->notes}}
+            </div>
+          </td>
           <td>{{$r->care_duration_in_days}}</td>
           <td>{{$r->mature_duration_in_days}}</td>
           <td>
