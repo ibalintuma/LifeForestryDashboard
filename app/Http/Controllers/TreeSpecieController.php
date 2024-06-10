@@ -18,7 +18,9 @@ class TreeSpecieController extends Controller
      */
     public function index()
     {
-        //
+        return view("dashboard.tree_species.index",[
+                "list"=>TreeSpecie::all()
+              ]);
     }
 
     /**
@@ -28,7 +30,7 @@ class TreeSpecieController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.tree_species.create");
     }
 
     /**
@@ -39,7 +41,23 @@ class TreeSpecieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+                $obj = new TreeSpecie();
+                        $obj->name = $request->name;
+                        $obj->type = $request->type;
+                        $obj->status = $request->status;
+                        $obj->notes = $request->notes;
+                        $obj->care_duration_in_days = $request->care_duration_in_days;
+                        $obj->mature_duration_in_days = $request->mature_duration_in_days;
+
+                        if ($files = $request->file('picture')){
+                            $fName = time().'.'.$request->picture->extension();
+                            $request->picture->move(public_path("images"), $fName);
+                            $obj->picture = url("images/".$fName);
+                        }
+
+                        $obj->save();
+
+                        return redirect()->route('tree_species.index');
     }
 
     /**
@@ -61,7 +79,7 @@ class TreeSpecieController extends Controller
      */
     public function edit(TreeSpecie $treeSpecie)
     {
-        //
+        return view("dashboard.tree_species.edit", ["obj" => $treeSpecie]);
     }
 
     /**
@@ -73,7 +91,25 @@ class TreeSpecieController extends Controller
      */
     public function update(Request $request, TreeSpecie $treeSpecie)
     {
-        //
+        $obj = $treeSpecie;
+
+      $obj->name = $request->name;
+      $obj->type = $request->type;
+      $obj->status = $request->status;
+      $obj->notes = $request->notes;
+      $obj->care_duration_in_days = $request->care_duration_in_days;
+      $obj->mature_duration_in_days = $request->mature_duration_in_days;
+
+      if ($files = $request->file('picture')){
+        $fName = time().'.'.$request->picture->extension();
+        $request->picture->move(public_path("images"), $fName);
+        $obj->picture = url("images/".$fName);
+      }
+
+      $obj->save();
+
+      return redirect()->route('tree_species.index');
+
     }
 
     /**
@@ -84,6 +120,7 @@ class TreeSpecieController extends Controller
      */
     public function destroy(TreeSpecie $treeSpecie)
     {
-        //
+              $treeSpecie->delete();
+              return redirect( url()->previous() );
     }
 }

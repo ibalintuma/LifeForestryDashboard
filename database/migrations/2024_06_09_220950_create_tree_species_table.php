@@ -26,6 +26,7 @@ return new class extends Migration
         Schema::create('tree_species', function (Blueprint $table) {
             $table->id();
             $table->string("name")->nullable();
+            $table->string("type")->nullable();
             $table->string("picture")->nullable();
             $table->string("status")->default("active")->nullable();
             $table->text("notes")->nullable();

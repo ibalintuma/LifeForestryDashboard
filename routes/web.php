@@ -188,6 +188,9 @@ Route::resource('/user-list', UserManagement::class);
 
 });
 
+
+Route::resource("tree_species",\App\Http\Controllers\TreeSpecieController::class);
+
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
