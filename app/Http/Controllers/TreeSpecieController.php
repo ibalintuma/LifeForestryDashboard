@@ -77,9 +77,9 @@ class TreeSpecieController extends Controller
      * @param  \App\Models\TreeSpecie  $treeSpecie
      * @return \Illuminate\Http\Response
      */
-    public function edit(TreeSpecie $treeSpecie)
+    public function edit($id)
     {
-        return view("dashboard.tree_species.edit", ["obj" => $treeSpecie]);
+        return view("dashboard.tree_species.edit", ["obj" => TreeSpecie::find( $id )]);
     }
 
     /**
@@ -89,9 +89,9 @@ class TreeSpecieController extends Controller
      * @param  \App\Models\TreeSpecie  $treeSpecie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TreeSpecie $treeSpecie)
+    public function update(Request $request, $id)
     {
-        $obj = $treeSpecie;
+        $obj = TreeSpecie::find($id);
 
       $obj->name = $request->name;
       $obj->type = $request->type;
