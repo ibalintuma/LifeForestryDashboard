@@ -118,9 +118,9 @@ class TreeSpecieController extends Controller
      * @param  \App\Models\TreeSpecie  $treeSpecie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TreeSpecie $treeSpecie)
+    public function destroy($id)
     {
-              $treeSpecie->delete();
+              TreeSpecie::find( $id)->delete();
               return redirect( url()->previous() );
     }
 }
