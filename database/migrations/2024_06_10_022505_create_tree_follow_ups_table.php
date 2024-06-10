@@ -16,11 +16,13 @@ return new class extends Migration
         Schema::create('tree_follow_ups', function (Blueprint $table) {
             $table->id();
 
-            $table->date('date_for_followup')->nullable();
+            $table->date('date_of_follow_up')->nullable();
             $table->unsignedBigInteger('tree_id')->nullable();
             $table->unsignedBigInteger('person_id')->nullable();
 
             $table->string('picture')->nullable();
+            $table->string('gps_x')->nullable();
+            $table->string('gps_y')->nullable();
 
             $table->double('height')->nullable();
             $table->double('canopy')->nullable();

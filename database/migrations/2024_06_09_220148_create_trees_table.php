@@ -35,6 +35,10 @@ return new class extends Migration
             $table->string("growth")->nullable();
             $table->string("survival")->nullable();
             $table->string("pests_diseases")->nullable();
+
+            $table->string("gps_x")->nullable();
+            $table->string("gps_y")->nullable();
+
             $table->text("notes")->nullable();
             $table->string("status")->default("active")->nullable();
 

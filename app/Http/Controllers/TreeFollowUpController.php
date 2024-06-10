@@ -29,7 +29,7 @@ class TreeFollowUpController extends Controller
       $tree_followup->environmental_conditions = $request->environmental_conditions;
       $tree_followup->notes = $request->notes;
       $tree_followup->status = $request->status;
-      $tree_followup->date_for_followup = $request->date_for_followup;
+      $tree_followup->date_of_follow_up = $request->date_of_follow_up;
       $tree_followup->save();
 
       return [
