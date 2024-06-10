@@ -96,6 +96,8 @@ class PersonController extends Controller
       $person->age = $age;
       $person->phone = $phone;
       $person->email = $email;
+      $person->gps_x = $gps_x;
+      $person->gps_y = $gps_y;
       $person->password = md5($password);
       $person->country = $country;
       $person->address = $address;

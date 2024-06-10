@@ -48,6 +48,8 @@ class TreeController extends Controller
       $tree->survival = $survival;
       $tree->pests_diseases = $pests_diseases;
       $tree->notes = $notes;
+      $tree->gps_x = $request->gps_x;
+      $tree->gps_y = $request->gps_y;
 
       if ($files = $request->file('picture')){
         $fName = Str::random(10).time().'.'.$request->picture->extension();

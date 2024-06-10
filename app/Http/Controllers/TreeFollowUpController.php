@@ -31,6 +31,8 @@ class TreeFollowUpController extends Controller
       $tree_followup->notes = $request->notes;
       $tree_followup->status = $request->status;
       $tree_followup->date_of_follow_up = $request->date_of_follow_up;
+      $tree_followup->gps_x = $request->gps_x;
+      $tree_followup->gps_y = $request->gps_y;
 
 
               if ($files = $request->file('picture')){
