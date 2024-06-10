@@ -25,3 +25,6 @@ Route::post('api_get_tree_species',[\App\Http\Controllers\TreeSpecieController::
 
 Route::post("api_create_tree",[\App\Http\Controllers\TreeController::class,"api_create_tree"]);
 Route::post("api_get_trees",[\App\Http\Controllers\TreeController::class,"api_get_trees"]);
+
+Route::post("api_get_tree_follow_up",[\App\Http\Controllers\TreeFollowUpController::class,"api_get_tree_follow_up"]);
+Route::post("api_create_tree_followup",[\App\Http\Controllers\TreeFollowUpController::class,"api_create_tree_followup"]);

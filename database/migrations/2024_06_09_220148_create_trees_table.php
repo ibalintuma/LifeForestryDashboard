@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger("tree_specie_id")->nullable();
 
             $table->date("date_of_planting")->nullable();
+            $table->date("next_follow_up_date")->nullable();
 
             $table->string("picture")->nullable();
             $table->string("source")->nullable();

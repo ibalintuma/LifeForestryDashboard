@@ -61,7 +61,7 @@ class TreeController extends Controller
       if ( isset( $request->person_id) ){
         $list_builder = Tree::where("person_id", $request->person_id);
       } else {
-        $list_builder = Request::whereNotNull("id");
+        $list_builder = Tree::whereNotNull("id");
       }
 
       return $list_builder->get()->map( function ($t){
