@@ -119,7 +119,9 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //
+        return view("dashboard.people.index",[
+                "list"=>Person::all()
+              ]);
     }
 
     /**
@@ -185,6 +187,8 @@ class PersonController extends Controller
      */
     public function destroy(Person $person)
     {
-        //
+
+              $person->delete();
+              return redirect( url()->previous() );
     }
 }

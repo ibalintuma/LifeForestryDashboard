@@ -1,6 +1,6 @@
-@extends('layouts/layoutMaster')
+<@extends('layouts/layoutMaster')
 
-@section('title', 'tree_species')
+@section('title', 'people')
 
 @section('vendor-style')
 <link rel="stylesheet" href="{{asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css')}}">
@@ -37,12 +37,12 @@
 
 @section('content')
 
-<!-- tree_species List Table -->
+<!-- people List Table -->
 <div class="card">
   <div class="card-header border-bottom">
-    <h5 class="card-title">tree_species
+    <h5 class="card-title">people
 
-        <a href='{{url("tree_species/create")}}'
+        <a href='{{url("people/create")}}'
                 class='add-new btn btn-primary float-end' >Add</a>
 
     </h5>
@@ -55,14 +55,27 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Picture</th>
+          <th>name</th>
+          <th>type</th>
+          <th>members</th>
+          <th>members_male</th>
+          <th>members_female</th>
+          <th>age</th>
+          <th>target_trees_to_plant</th>
+          <th>date_of_birth</th>
+          <th>national_id_number</th>
+          <th>gender</th>
+          <th>email</th>
+          <th>picture</th>
+          <th>country</th>
+          <th>address</th>
+          <th>gps_x</th>
+          <th>gps_y</th>
+          <th>access_code</th>
+          <th>bio</th>
           <th>status</th>
-          <th>Notes</th>
-          <th>Care duration in Days</th>
-          <th>Mature duration in Days</th>
-          <th>Action</th>
+          <th>created_at</th>
+          <th class="d-none">Action</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -72,21 +85,28 @@
         <tr>
           <td>{{$r->id}}</td>
           <td>{{$r->name}}</td>
-          <td>{{$r->type}}</td>
-          <td>
-            <img src="{{$r->picture}}" height="100px" alt="">
-          </td>
-          <td>{{$r->status}}</td>
-          <td>
-            <div style="width: 400px" >
-              {{$r->notes}}
-            </div>
-          </td>
-          <td>{{$r->care_duration_in_days}}</td>
-          <td>{{$r->mature_duration_in_days}}</td>
-          <td>
+          <th>{{$r->type}}</th>
+          <th>{{$r->members}}</th>
+          <th>{{$r->members_male}}</th>
+          <th>{{$r->members_female}}}}</th>
+          <th>{{$r->age}}</th>
+          <th>{{$r->target_trees_to_plant}}</th>
+          <th>{{$r->date_of_birth}}</th>
+          <th>{{$r->national_id_number}}</th>
+          <th>{{$r->gender}}</th>
+          <th>{{$r->email}}</th>
+          <th>{{$r->picture}}</th>
+          <th>{{$r->country}}</th>
+          <th>{{$r->address}}</th>
+          <th>{{$r->gps_x}}</th>
+          <th>{{$r->gps_y}}</th>
+          <th>{{$r->access_code}}</th>
+          <th>{{$r->bio}}</th>
+          <th>{{$r->status}}</th>
+          <th>{{$r->created_at}}</th>
+          <td class="d-none">
             <div class="d-inline-block text-nowrap">
-              <a href='{{url("tree_species/".$r->id."/edit")}}'>
+              <a href='{{url("people/".$r->id."/edit")}}'>
                 <button class="btn btn-sm btn-icon delete-record text-primary">
                   <i class="bx bx-edit"> Edit</i>
                 </button>
@@ -95,7 +115,7 @@
           </td>
           <td>
             <div>
-              <form action="{{ route('tree_species.destroy', $r->id) }}" method="POST">
+              <form action="{{ route('people.destroy', $r->id) }}" method="POST">
                             @method('DELETE')
                             @csrf
                   <button class="btn btn-sm btn-icon delete-record text-danger">
@@ -110,7 +130,7 @@
       @endforeach
     </table>
   </div>
-  <!-- Offcanvas to add new tree_species -->
+  <!-- Offcanvas to add new people -->
 
 </div>
 @endsection

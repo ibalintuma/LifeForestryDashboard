@@ -4,6 +4,12 @@
       "menuHeader": "Apps & Pages"
     },
     {
+      "url": "people",
+      "name": "People/Accounts",
+      "icon": "menu-icon tf-icons bx bx-calendar",
+      "slug": "app-calendar"
+    },
+    {
       "url": "tree_species",
       "name": "Tree Species",
       "icon": "menu-icon tf-icons bx bx-calendar",
