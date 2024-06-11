@@ -42,9 +42,6 @@
   <div class="card-header border-bottom">
     <h5 class="card-title">tree follow ups
 
-        <a href='{{url("tree_follow_ups/create")}}'
-                class='add-new btn btn-primary float-end' >Add</a>
-
     </h5>
 
   </div>

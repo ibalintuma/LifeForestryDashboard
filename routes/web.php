@@ -20,9 +20,12 @@ Route::group(['middleware' => 'auth'], function() {
 
 $controller_path = 'App\Http\Controllers';
 
+Route::get("/", [\App\Http\Controllers\PersonController::class,"index"]);
+Route::get("/home", [\App\Http\Controllers\PersonController::class,"index"]);
+
 // Main Page Route
-Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
-Route::get('/home', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+//Route::get('/', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
+//Route::get('/home', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
 Route::get('/dashboard/analytics', $controller_path . '\dashboard\Analytics@index')->name('dashboard-analytics');
 Route::get('/dashboard/ecommerce', $controller_path . '\dashboard\Ecommerce@index')->name('dashboard-ecommerce');
 

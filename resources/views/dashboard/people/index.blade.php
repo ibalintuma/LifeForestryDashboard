@@ -42,9 +42,6 @@
   <div class="card-header border-bottom">
     <h5 class="card-title">people
 
-        <a href='{{url("people/create")}}'
-                class='add-new btn btn-primary float-end' >Add</a>
-
     </h5>
 
   </div>
