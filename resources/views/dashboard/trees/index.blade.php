@@ -79,7 +79,7 @@
           <th>notes</th>
           <th>status</th>
           <th>created_at</th>
-          <th>Action</th>
+          <th class="d-none">Action</th>
           <th>Action</th>
         </tr>
       </thead>

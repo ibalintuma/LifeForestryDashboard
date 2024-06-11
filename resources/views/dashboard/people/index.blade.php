@@ -88,7 +88,7 @@
           <th>{{$r->type}}</th>
           <th>{{$r->members}}</th>
           <th>{{$r->members_male}}</th>
-          <th>{{$r->members_female}}}}</th>
+          <th>{{$r->members_female}}</th>
           <th>{{$r->age}}</th>
           <th>{{$r->target_trees_to_plant}}</th>
           <th>{{$r->date_of_birth}}</th>

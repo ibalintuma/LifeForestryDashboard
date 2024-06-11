@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Person;
 use App\Models\Tree;
 use App\Models\TreeFollowUp;
 use App\Models\TreeSpecie;
@@ -77,7 +78,13 @@ class TreeFollowUpController extends Controller
      */
     public function index()
     {
-        //
+        return view("dashboard.tree_follow_ups.index",[
+                "list"=>TreeFollowUp::all()->map( function ($f){
+                  $f->person = Person::find( $f->person_id);
+                  $f->tree = Person::find( $f->tree_id);
+                  return $f;
+                })
+              ]);
     }
 
     /**

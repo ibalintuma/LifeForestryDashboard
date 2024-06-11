@@ -192,6 +192,7 @@ Route::resource('/user-list', UserManagement::class);
 Route::resource("tree_species",\App\Http\Controllers\TreeSpecieController::class);
 Route::resource("trees",\App\Http\Controllers\TreeController::class);
 Route::resource("people",\App\Http\Controllers\PersonController::class);
+Route::resource("tree_follow_ups",\App\Http\Controllers\TreeFollowUpController::class);
 
 // Auth::routes();
 
