@@ -58,23 +58,23 @@
           <th>name</th>
           <th>type</th>
           <th>members</th>
-          <th>members_male</th>
-          <th>members_female</th>
+          <th>members male</th>
+          <th>members female</th>
           <th>age</th>
-          <th>target_trees_to_plant</th>
-          <th>date_of_birth</th>
-          <th>national_id_number</th>
+          <th>target trees to plant</th>
+          <th>date of birth</th>
+          <th>national id number</th>
           <th>gender</th>
           <th>email</th>
           <th>picture</th>
           <th>country</th>
           <th>address</th>
-          <th>gps_x</th>
-          <th>gps_y</th>
-          <th>access_code</th>
+          <th>gps x</th>
+          <th>gps y</th>
+          <th>access code</th>
           <th>bio</th>
           <th>status</th>
-          <th>created_at</th>
+          <th>created at</th>
           <th class="d-none">Action</th>
           <th>Action</th>
         </tr>

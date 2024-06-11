@@ -55,30 +55,30 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>person_id</th>
-          <th>tree_specie_id</th>
-          <th>number_of_trees_planted</th>
-          <th>date_of_planting</th>
-          <th>next_follow_up_date</th>
+          <th>person</th>
+          <th>tree specie</th>
+          <th>number of trees planted</th>
+          <th>date of planting</th>
+          <th>next follow up date</th>
           <th>source</th>
           <th>picture</th>
-          <th>obtained_from</th>
+          <th>obtained from</th>
           <th>location</th>
-          <th>soil_prep</th>
+          <th>soil prep</th>
           <th>method</th>
           <th>weather</th>
           <th>watering</th>
           <th>mulch</th>
-          <th>initial_health</th>
-          <th>care_schedule</th>
+          <th>initial health</th>
+          <th>care schedule</th>
           <th>growth</th>
           <th>survival</th>
-          <th>pests_diseases</th>
-          <th>gps_x</th>
-          <th>gps_y</th>
+          <th>pests diseases</th>
+          <th>gps x</th>
+          <th>gps y</th>
           <th>notes</th>
           <th>status</th>
-          <th>created_at</th>
+          <th>created at</th>
           <th class="d-none">Action</th>
           <th>Action</th>
         </tr>

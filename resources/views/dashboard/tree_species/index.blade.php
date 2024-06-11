@@ -42,7 +42,7 @@
   <div class="card-header border-bottom">
     <h5 class="card-title">tree_species
 
-        <a href='{{url("tree_species/create")}}'
+        <a href='{{url("tree species/create")}}'
                 class='add-new btn btn-primary float-end' >Add</a>
 
     </h5>

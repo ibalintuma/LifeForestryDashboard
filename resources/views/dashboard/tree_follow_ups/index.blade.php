@@ -40,7 +40,7 @@
 <!-- tree_follow_ups List Table -->
 <div class="card">
   <div class="card-header border-bottom">
-    <h5 class="card-title">tree_follow_ups
+    <h5 class="card-title">tree follow ups
 
         <a href='{{url("tree_follow_ups/create")}}'
                 class='add-new btn btn-primary float-end' >Add</a>
@@ -55,27 +55,27 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>date_of_follow_up</th>
-          <th>tree_id</th>
-          <th>person_id</th>
+          <th>date of follow up</th>
+          <th>tree id</th>
+          <th>person id</th>
           <th>picture</th>
-          <th>gps_x</th>
-          <th>gps_y</th>
+          <th>gps x</th>
+          <th>gps y</th>
           <th>height</th>
           <th>canopy</th>
-          <th>trunk_diameter</th>
-          <th>leaf_condition</th>
-          <th>new_growth</th>
+          <th>trunk diameter</th>
+          <th>leaf condition</th>
+          <th>new growth</th>
           <th>watering</th>
           <th>fertilization</th>
           <th>mulch</th>
-          <th>weed_pest_control</th>
+          <th>weed pest control</th>
           <th>pruning</th>
-          <th>general_health</th>
-          <th>environmental_conditions</th>
+          <th>general health</th>
+          <th>environmental conditions</th>
           <th>notes</th>
           <th>status</th>
-          <th>created_at</th>
+          <th>created at</th>
           <th class="d-none">Action</th>
           <th>Action</th>
         </tr>
