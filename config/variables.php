@@ -1,10 +1,10 @@
 <?php
   // Variables
   return [
-    "creatorName" => "PIXINVENT",
-    "creatorUrl" => "https://pixinvent.com",
-    "templateName" => "Frest",
-    "templateSuffix" => "Bootstrap Admin Template",
+    "creatorName" => "CTI-Africa",
+    "creatorUrl" => "https://cti-afria.com",
+    "templateName" => "LifeForestry",
+    "templateSuffix" => "LifeForestry",
     "templateVersion" => "1.0.0",
     "templateFree" => false,
     "templateDescription" => "Start your development with a Dashboard for Bootstrap 5",
