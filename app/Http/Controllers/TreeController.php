@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Person;
 use App\Models\Tree;
 use App\Models\TreeSpecie;
 use Illuminate\Http\Request;
@@ -42,6 +43,11 @@ class TreeController extends Controller
       $tree->weather = $weather;
       $tree->watering = $watering;
       $tree->mulch = $mulch;
+
+      if (isset($request->number_of_trees_planted)){
+        $tree->number_of_trees_planted = $request->number_of_trees_planted;
+      }
+
       $tree->care_schedule = $care_schedule;
       $tree->initial_health = $initial_health;
       $tree->growth = $growth;
@@ -89,7 +95,13 @@ class TreeController extends Controller
      */
     public function index()
     {
-        //
+        return view("dashboard.trees.index",[
+                "list"=>Tree::orderBy("id","desc")->get()->map( function ($t){
+                  $t->tree_specie = TreeSpecie::find($t->tree_specie_id);
+                  $t->person = Person::find($t->person_id);
+                  return $t;
+                })
+              ]);
     }
 
     /**
@@ -155,6 +167,7 @@ class TreeController extends Controller
      */
     public function destroy(Tree $tree)
     {
-        //
+              $tree->delete();
+              return redirect( url()->previous() );
     }
 }

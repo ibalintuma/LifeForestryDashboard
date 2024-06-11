@@ -190,6 +190,7 @@ Route::resource('/user-list', UserManagement::class);
 
 
 Route::resource("tree_species",\App\Http\Controllers\TreeSpecieController::class);
+Route::resource("trees",\App\Http\Controllers\TreeController::class);
 
 // Auth::routes();
 
