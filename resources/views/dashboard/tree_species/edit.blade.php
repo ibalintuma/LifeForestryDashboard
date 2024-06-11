@@ -87,7 +87,7 @@
 
           <div class='mb-3'>
                     <label for="defaultFormControlInput" class="form-label">picture</label>
-                    <input type="text" class="form-control"
+                    <input type="file" class="form-control"
                            name='picture'
                            id="defaultFormControlInput" aria-describedby="defaultFormControlHelp" />
                   </div>
