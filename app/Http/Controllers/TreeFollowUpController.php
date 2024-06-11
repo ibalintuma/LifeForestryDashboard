@@ -150,6 +150,7 @@ class TreeFollowUpController extends Controller
      */
     public function destroy(TreeFollowUp $treeFollowUp)
     {
-        //
+              $treeFollowUp->delete();
+              return redirect( url()->previous() );
     }
 }
