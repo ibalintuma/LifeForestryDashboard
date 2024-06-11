@@ -105,6 +105,7 @@
                     <label for="defaultFormControlInput" class="form-label">notes</label>
                     <input type="text" class="form-control"
                            name='notes'
+                           value="{{ $obj->notes }}"
                            id="defaultFormControlInput" aria-describedby="defaultFormControlHelp" />
                   </div>
 
