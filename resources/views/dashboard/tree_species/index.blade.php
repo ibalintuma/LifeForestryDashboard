@@ -40,9 +40,9 @@
 <!-- tree_species List Table -->
 <div class="card">
   <div class="card-header border-bottom">
-    <h5 class="card-title">tree_species
+    <h5 class="card-title">tree species
 
-        <a href='{{url("tree species/create")}}'
+        <a href='{{url("tree_species/create")}}'
                 class='add-new btn btn-primary float-end' >Add</a>
 
     </h5>
