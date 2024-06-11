@@ -47,6 +47,12 @@ class TreeController extends Controller
       if (isset($request->number_of_trees_planted)){
         $tree->number_of_trees_planted = $request->number_of_trees_planted;
       }
+      if (isset($request->source_other)){
+        $tree->source_other = $request->source_other;
+      }
+      if (isset($request->height)){
+        $tree->height = $request->height;
+      }
 
       $tree->care_schedule = $care_schedule;
       $tree->initial_health = $initial_health;
