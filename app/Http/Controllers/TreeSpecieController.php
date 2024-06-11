@@ -44,6 +44,7 @@ class TreeSpecieController extends Controller
     public function store(Request $request)
     {
                 $obj = new TreeSpecie();
+      $obj->parent_id = $request->parent_id;
                         $obj->name = $request->name;
                         $obj->type = $request->type;
                         $obj->status = $request->status;
@@ -96,6 +97,7 @@ class TreeSpecieController extends Controller
     {
         $obj = TreeSpecie::find($id);
 
+      $obj->parent_id = $request->parent_id;
       $obj->name = $request->name;
       $obj->type = $request->type;
       $obj->status = $request->status;
