@@ -30,7 +30,9 @@ class TreeSpecieController extends Controller
      */
     public function create()
     {
-        return view("dashboard.tree_species.create");
+        return view("dashboard.tree_species.create",[
+          'species'=>TreeSpecie::whereNull("parent_id")->get()
+        ]);
     }
 
     /**
@@ -79,7 +81,8 @@ class TreeSpecieController extends Controller
      */
     public function edit($id)
     {
-        return view("dashboard.tree_species.edit", ["obj" => TreeSpecie::find( $id )]);
+        return view("dashboard.tree_species.edit", ["obj" => TreeSpecie::find( $id ),
+          'species'=>TreeSpecie::whereNull("parent_id")->get()]);
     }
 
     /**

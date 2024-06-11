@@ -126,6 +126,19 @@
                              aria-describedby="defaultFormControlHelp" />
                     </div>
 
+          <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">parent</label>
+                    <select class="form-select" id="exampleFormControlSelect1"
+                            aria-label="Default select" name='parent_id'>
+                            <option value="">Select parent</option>
+                      @foreach($species as $item)
+                        <option value="{{$item->id}}"
+                        @if( $item->id == $obj->parent_id ) selected @endif
+                        >{{$item->name}}</option>
+                      @endforeach
+                    </select>
+                  </div>
+
           <button type="submit" class="btn btn-primary me-sm-3 me-1 data-submit">Submit</button>
           <a href='{{url()->previous()}}' class="btn btn-label-secondary">Cancel</a>
 

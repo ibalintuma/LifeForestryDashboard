@@ -62,6 +62,7 @@
           <th>Notes</th>
           <th>Care duration in Days</th>
           <th>Mature duration in Days</th>
+          <th>parent_id</th>
           <th>Action</th>
           <th>Action</th>
         </tr>
@@ -84,6 +85,7 @@
           </td>
           <td>{{$r->care_duration_in_days}}</td>
           <td>{{$r->mature_duration_in_days}}</td>
+          <td>{{$r->parent_id}}</td>
           <td>
             <div class="d-inline-block text-nowrap">
               <a href='{{url("tree_species/".$r->id."/edit")}}'>

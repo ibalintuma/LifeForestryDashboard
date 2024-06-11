@@ -59,6 +59,8 @@
           <th>date of planting</th>
           <th>next follow up date</th>
           <th>source</th>
+          <th>source other</th>
+          <th>height</th>
           <th>picture</th>
           <th>obtained from</th>
           <th>location</th>
@@ -100,6 +102,8 @@
           <td>{{$r->date_of_planting}}</td>
           <td>{{$r->next_follow_up_date}}</td>
           <td>{{$r->source}}</td>
+          <td>{{$r->source_other}}</td>
+          <td>{{$r->height}}</td>
           <td>
             <img src="{{$r->picture}}" height="100px" alt="">
           </td>
