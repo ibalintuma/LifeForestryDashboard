@@ -87,8 +87,14 @@
           <td>{{$r->id}}</td>
           <td>{{$r->date_of_follow_up}}</td>
           <td>{{$r->tree_id}}</td>
-          <td>{{$r->person_id}}</td>
-          <td>{{$r->picture}}</td>
+          <td>
+            @isset($r->person)
+              {{$r->person->name}}
+            @endisset
+          </td>
+          <td>
+            <img src="{{$r->picture}}" height="100px" alt="">
+          </td>
           <td>{{$r->gps_x}}</td>
           <td>{{$r->gps_y}}</td>
           <td>{{$r->height}}</td>

@@ -88,13 +88,23 @@
 
         <tr>
           <td>{{$r->id}}</td>
-          <td>{{$r->person_id}}</td>
-          <td>{{$r->tree_specie_id}}</td>
+          <td>
+            @isset($r->person)
+              {{$r->person->name}}
+            @endisset
+          </td>
+          <td>
+            @isset($r->tree_specie)
+              {{$r->tree_specie->name}}
+            @endisset
+          </td>
           <td>{{$r->number_of_trees_planted}}</td>
           <td>{{$r->date_of_planting}}</td>
           <td>{{$r->next_follow_up_date}}</td>
           <td>{{$r->source}}</td>
-          <td>{{$r->picture}}</td>
+          <td>
+            <img src="{{$r->picture}}" height="100px" alt="">
+          </td>
           <td>{{$r->obtained_from}}</td>
           <td>{{$r->location}}</td>
           <td>{{$r->soil_prep}}</td>
