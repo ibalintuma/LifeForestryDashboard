@@ -9,6 +9,11 @@ use function Sodium\add;
 class PersonController extends Controller
 {
 
+    //api
+    public function api_get_all(){
+        return Person::all();
+    }
+
     public function api_sign_in(Request $request){
         $phone = $request->phone;
         $password = $request->password;

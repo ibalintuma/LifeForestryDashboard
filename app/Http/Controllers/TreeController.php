@@ -11,6 +11,14 @@ use Illuminate\Support\Str;
 class TreeController extends Controller
 {
 
+  public function api_trees(Request $request)
+  {
+      return Tree::join("people","people.id","=","trees.person_id")
+          ->join("tree_species","tree_species.id","=","trees.tree_specie_id")
+          ->select("trees.*","people.name as person_name","tree_species.name as tree_specie_name")
+          ->get();
+  }
+
     public function api_create_tree(Request $request){
 
       $person_id = $request->person_id;

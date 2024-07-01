@@ -28,3 +28,7 @@ Route::post("api_get_trees",[\App\Http\Controllers\TreeController::class,"api_ge
 
 Route::post("api_get_tree_follow_up",[\App\Http\Controllers\TreeFollowUpController::class,"api_get_tree_follow_up"]);
 Route::post("api_create_tree_followup",[\App\Http\Controllers\TreeFollowUpController::class,"api_create_tree_followup"]);
+
+//bip
+Route::get("bip/persons",[\App\Http\Controllers\PersonController::class,"api_get_all"]);
+Route::get("bip/trees",[\App\Http\Controllers\TreeController::class,"api_trees"]);
