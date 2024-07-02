@@ -32,3 +32,4 @@ Route::post("api_create_tree_followup",[\App\Http\Controllers\TreeFollowUpContro
 //bip
 Route::get("bip/persons",[\App\Http\Controllers\PersonController::class,"api_get_all"]);
 Route::get("bip/trees",[\App\Http\Controllers\TreeController::class,"api_trees"]);
+

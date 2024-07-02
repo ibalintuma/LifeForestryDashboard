@@ -5,17 +5,15 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class PersonSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        \App\Models\User::factory(30)->create();
-        $this->call(PersonSeeder::class);
-        $this->call(TreeSeeder::class);
+      \App\Models\Person::factory()->count(150)->create();
     }
 }
